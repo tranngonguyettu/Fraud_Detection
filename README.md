@@ -26,5 +26,9 @@ The dataset is extremely imbalanced, with the number of fraudulent transactions 
 ### Transaction amount analysis
 <img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/a7e108c1-5465-42cf-bbac-fad7ac080e7b" />
 
-The boxplot shows that both normal and fraudulent transactions exhibit a right-skewed distribution of transaction amounts and they have much overlapped amount distribution. Normal transactions has higher median and more outliers due to the much large number of normal cases, while lower median and high density of outliers are observed in type fraud because of small number of anonymised records. 
+Overall, The transaction amount distribution is highly right-skewed, with a small number of transactions having very large values.
+
+<img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/df788bd8-1de5-45cb-b8fd-40cff220f24d" />
+
+The boxplot shows that both normal and fraudulent transactions exhibit a right-skewed distribution of transaction amounts. Normal transactions has higher median and more outliers due to the much large number of normal cases, while lower median and high density of outliers are observed in type fraud because of small number of anonymised records. This huge overlap indicates that the amount feature alone is not a strong predictor for fraud detection and it may lead to missed fraudulent cases if used in isolation as many fraud transactions fall within the typical amount range of normal transactions.
 
