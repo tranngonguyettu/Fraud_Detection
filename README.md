@@ -35,3 +35,12 @@ The boxplot shows that both normal and fraudulent transactions exhibit a right-s
 ## Time-based analysis
 <img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/23cb0b7f-5306-480e-8f2d-031658ff603c" />
 
+Transaction time was converted into hourly bins to examine temporal patterns. The slight variations across time hour are observed in the distribution of fraud amount and the density of amount for both transactions are mostly overlapped, showing that time-related features provide limited potential compared to behavioural features.
+
+<img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/e9c820ec-1a44-42a4-959a-98e050464691" />
+
+The fraudulent rate over time is unstable with the number of peaks occuring incoherently in different time bins. This can be explained by low transaction volumes in these time hours.
+There is no particular time patterns to predict fraudulent behaviours, meaning that transaction time alone exhibit insufficient potential for fraud detection.
+
+Consequently, compared to transaction amount and time, behavioural PCA features analysis is required to determine clearer separation between fraudulent and legitimate transactions.
+
