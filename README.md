@@ -13,4 +13,6 @@ This project aims to:
 The real-world bank transactions that are recored by European cardholders conducted in 2013 are presented is this data. Out of more than 284K transactions, 492 were recorded as fraud and took place over than 2 days.
 There are 31 columns, including:
  - Time: by seconds, since the very first transaction was occured
- 
+ - V1 - V28 (29 feature columns - location, branch, transaction type,...): PCA transformation
+ - Amount: the amount of money that each transaction processes
+ - Class: fraud - normal category (0: normal; 1:fraud)
