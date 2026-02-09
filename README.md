@@ -1,7 +1,6 @@
 # Credit card transactions - Fraud Detection: Optimising fraudulent rate and determining abnormal features
 Tools used: Python (Pandas, Numpy, Seaborn, Matplotlib, Scikit-learn)
-<img width="512" height="347" alt="Image" src="https://github.com/user-attachments/assets/18a84024-f052-4b21-a22c-9f7499c795a8" />
-
+<img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/3f92281c-9711-4f53-b25a-b6a1ee548d3e" />
 By: Jessica Tran - me 
 ## Project description
 This project focuses on detecting fraudulent transactions using machine learning models. Due to class imbalance in the dataset, traditional evaluation metrics are insufficient. The project emphasises fraud-specific metrics and model interpretability to identify the most effective predictive approach.
