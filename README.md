@@ -15,7 +15,7 @@ The real-world bank transactions that are recored by European cardholders conduc
 There are 31 columns, including:
  - Time: by seconds, since the very first transaction was occured
  - V1 - V28 (29 feature columns - location, branch, transaction type,...): PCA transformation
- - Amount: the amount of money that each transaction processes
+ - Amount: the amount that each transaction processes
  - Class: fraud - normal category (0: normal; 1:fraud)
 # Explotary data analysis (EDA)
 ## Class imbalance
