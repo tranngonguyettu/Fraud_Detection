@@ -9,6 +9,7 @@ This project aims to:
   2. To develop and compare models for fraud detection
   3. To evaluate machine learning models emphasizing recall and F1-score as primary metrics for imbalanced data
   4. To determine the most suitable model for minimising missed fraudulent transactions
+
 Tools used: Python (Pandas, Numpy, Seaborn, Matplotlib, Scikit-learn)
 # Dataset description
 The real-world bank transactions that are recored by European cardholders conducted in 2013 are presented is this data. Out of more than 284K transactions, 492 were recorded as fraud and took place over than 2 days.
