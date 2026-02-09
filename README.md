@@ -43,3 +43,6 @@ The fraudulent rate over time is unstable with the number of peaks occuring inco
 
 Consequently, compared to transaction amount and time, behavioural PCA features analysis is required to determine clearer separation between fraudulent and legitimate transactions.
 
+## Feature correlation
+<img width="1536" height="754" alt="Image" src="https://github.com/user-attachments/assets/e7c9fca7-658b-4a2f-8a81-2ffc9fe91fd5" />
+
