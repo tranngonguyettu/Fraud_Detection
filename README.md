@@ -17,5 +17,5 @@ There are 31 columns, including:
  - V1 - V28 (29 feature columns - location, branch, transaction type,...): PCA transformation
  - Amount: the amount of money that each transaction processes
  - Class: fraud - normal category (0: normal; 1:fraud)
-## Class distribution
-
+## Explotary data analysis (EDA)
+### Class Distribution
