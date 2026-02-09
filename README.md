@@ -21,5 +21,6 @@ There are 31 columns, including:
 ### Class imbalance
 <img width="1536" height="754" alt="Image" src="https://github.com/user-attachments/assets/ddb8d6d5-3ae1-4bfa-91e6-cc674315d643" />
 The dataset is extremely imbalanced, with the number of fraudulent transactions accounting for 0.17% of above 284K records. Therefore, accuracy is not recommended in this analysis to evaluate the models. Instead, suitable metrics, such as Recall, Precision, F1-score, AUPRC are highlighted for this imbalance classification
+
 ### Amount distribution
 <img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/a7e108c1-5465-42cf-bbac-fad7ac080e7b" />
