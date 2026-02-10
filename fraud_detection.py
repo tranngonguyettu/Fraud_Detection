@@ -182,7 +182,7 @@ log_reg = LogisticRegression()
 log_reg.fit(X_train, y_train)
 log_reg_prediction = log_reg.predict(X_test)
 print("============================ Logistic Regression ============================")
-print('Accuracy score of the Logistic Regression model is {}'.format(accuracy_score(y_test, log_reg_prediction)))
+print('Recall score of the Logistic Regression model is {}'.format(recall_score(y_test, log_reg_prediction)))
 print('F1 score of the Logistic Regression model is {}'.format(f1_score(y_test, log_reg_prediction)))
 
 #Decision tree
@@ -192,7 +192,7 @@ tree = DecisionTreeClassifier(criterion='gini',
 tree.fit(X_train, y_train)
 tree_prediction = tree.predict(X_test)
 print("============================ Decision Tree ============================")
-print('Accuracy score of the Decision Tree model is {}'.format(accuracy_score(y_test, tree_prediction)))
+print('Recall score of the Decision Tree model is {}'.format(recall_score(y_test, tree_prediction)))
 print('F1 score of the Decision Tree model is {}'.format(f1_score(y_test, tree_prediction)))
 confusion_matrix(y_test, tree_prediction, labels = [0, 1])
 
@@ -208,7 +208,7 @@ forest = RandomForestClassifier(
 forest.fit(X_train, y_train)
 forest_prediction = forest.predict(X_test)
 print("============================ Random Forest ============================")
-print('Accuracy score of the Random Forest model is {}'.format(accuracy_score(y_test, forest_prediction)))
+print('Recall score of the Random Forest model is {}'.format(recall_score(y_test, forest_prediction)))
 print('F1 score of the Random Forest model is {}'.format(f1_score(y_test, forest_prediction)))
 
 #XGBoost classifier
@@ -235,7 +235,7 @@ xgb_predict = xgb.predict(X_test)
 print("============================ XGBoost Classifier ============================")
 print("Confusion Matrix:\n", confusion_matrix(y_test, xgb_predict))
 print("\nClassification Report:\n", classification_report(y_test, xgb_predict, digits=4))
-print("Accuracy score of the Random Forest model is {}".format(precision_score(y_test, xgb_predict)))
+print("Precision score of the Random Forest model is {}".format(precision_score(y_test, xgb_predict)))
 print("Recall score of the Random Forest model is {}".format(recall_score(y_test, xgb_predict)))
 print("F1-score of the XGBoost is {}".format(f1_score(y_test, xgb_predict)))
 
