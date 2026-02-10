@@ -13,6 +13,7 @@ This project aims to:
 Tools used: Python (Pandas, Numpy, Seaborn, Matplotlib, Scikit-learn)
 # Dataset description
 Data source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
 The real-world bank transactions by European cardholders in 2013 are presented is this data. Out of more than 284K transactions, 492 were recorded as fraud and took place over than 2 days.
 There are 31 columns, including:
  - Time: by seconds, since the very first transaction was occured
