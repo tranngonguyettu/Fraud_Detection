@@ -10,7 +10,7 @@ This project aims to:
   3. To evaluate machine learning models emphasizing recall and F1-score as primary metrics for imbalanced data
   4. To determine the most suitable model for minimising missed fraudulent transactions
 
-Tools used: Python (Pandas, Numpy, Seaborn, Matplotlib, Scikit-learn)
+Tools used: Python (Pandas, Seaborn, Matplotlib, Scikit-learn)
 # Dataset description
 Data source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
@@ -50,3 +50,15 @@ Consequently, compared to transaction amount and time, behavioural PCA features 
 <img width="1536" height="754" alt="Image" src="https://github.com/user-attachments/assets/9bd79836-616f-45ed-8569-7f2175ae82b8" />
 
 Correlation heat map shows the limited association between most features. This is expected as the majority of predictors are PCA-transformed components.
+
+# Data preprocessing
+- Duplicate records were removed
+- Transaction amount was standardalized using StandardScaler()
+- Stratified train–test splitting was applied to preserve the original class distribution
+
+# Model development
+- Four supervised learning models were implemented:
+  1. Logistic Regression
+  2. Decision Tree
+  3. Random Forest
+  4. XGBoost Classifier
