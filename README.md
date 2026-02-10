@@ -68,3 +68,8 @@ Four supervised learning models were implemented:
 <img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/8e7694ad-398b-423a-b713-4043969e1c3a" />
 
 As expected, accuracy scores are nearly 100 in all models, showing that accuracy metric is overfiiting to evaluate the best model in this case. XGBoost Classifier achieve the highest precision and F1 score, indicating the best balance and accurate model for fraud detection. Although Random Forest has the higher recall score, its precision is the lowest number. As a result, XGBoost provides a superior balance between precision and recall
+
+# Confusion matrix - XGBoost Classifier
+<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/d6f6cb7a-01ca-4f8b-a6b4-1ecc3f5d9243" />
+
+XGBoost Classifier is the best model for this project. The confusion matrix shows a substantial reduction in false negatives compared to baseline models.
