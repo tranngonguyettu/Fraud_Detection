@@ -63,8 +63,7 @@ Four supervised learning models were implemented:
   3. Random Forest: more complex model to improve robustness through ensemble learning and reduce overfitting
   4. XGBoost Classifier: the star of this project to handle complex feature interaction in highly imbalanced classification tasks
 # Model evaluation 
-- Metric tables
-<img width="622" height="110" alt="Image" src="https://github.com/user-attachments/assets/7c4beff8-7208-475a-97bf-3bd50baa29cf" />
+<img width="601" height="115" alt="Image" src="https://github.com/user-attachments/assets/f583fb63-7888-4faf-8962-b11a45581041" />
 
 <img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/8e7694ad-398b-423a-b713-4043969e1c3a" />
 
