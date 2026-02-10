@@ -1,4 +1,4 @@
-# Credit card transactions - Fraud Detection: Optimising fraudulent rate and determining abnormal features
+# Credit card transactions - Fraud detection: Evaluating machine learning models and determining abnormal features
 <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/3f92281c-9711-4f53-b25a-b6a1ee548d3e" />
 
 By: Jessica Tran - me 
