@@ -57,8 +57,15 @@ Correlation heat map shows the limited association between most features. This i
 - Stratified train–test splitting was applied to preserve the original class distribution
 
 # Model development
-- Four supervised learning models were implemented:
-  1. Logistic Regression
-  2. Decision Tree
-  3. Random Forest
-  4. XGBoost Classifier
+Four supervised learning models were implemented:
+  1. Logistic Regression: baseline model for transaction type classification, used to assess whether linear decision boundaries are sufficient for fraud detection.
+  2. Decision Tree: simple tree-based benchmark to capture non-linear relationships between characteristics
+  3. Random Forest: more complex model to improve robustness through ensemble learning and reduce overfitting
+  4. XGBoost Classifier: the star of this project to handle complex feature interaction in highly imbalanced classification tasks
+# Model evaluation 
+- Metric tables
+<img width="622" height="110" alt="Image" src="https://github.com/user-attachments/assets/7c4beff8-7208-475a-97bf-3bd50baa29cf" />
+
+<img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/8e7694ad-398b-423a-b713-4043969e1c3a" />
+
+As expected, accuracy scores are nearly 100 in all models, showing that accuracy metric is overfiiting to evaluate the best model in this case. XGBoost Classifier achieve the highest precision and F1 score, indicating the best balance and accurate model for fraud detection. Although Random Forest has the higher recall score, its precision is the lowest number. As a result, XGBoost provides a superior balance between precision and recall
