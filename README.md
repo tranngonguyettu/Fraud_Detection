@@ -92,4 +92,4 @@ V14 and V10 demonstrate clear separation between fraud and normal cases, with sm
 Overall, the observed separation patterns confirm that these behavioural features are important to fraud detection, far more than transaction amount and time
 
 # Conclusion
-This project demonstrates an end-to-end fraud detection workflow, from exploratory data analysis to model selection and interpretation. The results highlight the importance of machine learning models and behavioural features in handling highly imbalanced financial datasets
+This project demonstrates an end-to-end fraud detection workflow, from exploratory data analysis to model selection and interpretation. XGBoost Classifier is the best model for fraud detection to detect fraud and optimise the costs of false negatives, evaluated by F1-score and Recall metrics. The results highlight the importance of machine learning models and behavioural features in handling highly imbalanced financial datasets
