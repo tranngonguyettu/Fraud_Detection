@@ -281,11 +281,28 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 
-#XGBoost is the selected model, confusion matrix for this model is needed
-cm = confusion_matrix(y_test, xgb_predict)
+#Confusion matrix for Random Forest
+cm1 = confusion_matrix(y_test, forest_prediction)
 plt.figure(figsize=(4,4))
 sns.heatmap(
-    cm,
+    cm1,
+    annot = True,
+    fmt='d',
+    cmap='Blues',
+    xticklabels=['Normal','Fraud'],
+    yticklabels=['Normal','Fraud']
+)
+plt.xlabel('Predicted label')
+plt.ylabel('True label')
+plt.title('Confusion matrix - Random Forest')
+plt.tight_layout()
+plt.show()
+
+#Confusion matrix for XGBoost
+cm2 = confusion_matrix(y_test, xgb_predict)
+plt.figure(figsize=(4,4))
+sns.heatmap(
+    cm2,
     annot = True,
     fmt='d',
     cmap='Reds',
@@ -331,7 +348,7 @@ plt.show()
 
 #Feature distribution - KDE
 top_features = ['V14','V10','V4','V12','V11','V9']
-plt.figure(figsize=(12,4))
+plt.figure(figsize=(12,6))
 
 for i, feature in enumerate(top_features,1):
     plt.subplot(2,3,i)
