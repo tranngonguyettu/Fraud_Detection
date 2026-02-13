@@ -93,3 +93,7 @@ Overall, the observed separation patterns confirm that these behavioural feature
 
 # Conclusion
 This project demonstrates an end-to-end fraud detection workflow, from exploratory data analysis to model selection and interpretation. XGBoost Classifier is the best model for fraud detection to detect fraud and optimise the costs of false negatives, evaluated by F1-score and Recall metrics. The results highlight the importance of machine learning models and behavioural features in handling highly imbalanced financial datasets
+
+# Reference
+1. https://towardsdatascience.com/credit-card-fraud-detection-using-machine-learning-python-5b098d4a8edc/
+2. https://www.kaggle.com/code/gpreda/credit-card-fraud-detection-predictive-models
