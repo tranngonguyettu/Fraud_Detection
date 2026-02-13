@@ -281,39 +281,48 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 
-#Confusion matrix for Random Forest
+from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Tính confusion matrix
 cm1 = confusion_matrix(y_test, forest_prediction)
-plt.figure(figsize=(4,4))
+cm2 = confusion_matrix(y_test, xgb_predict)
+
+# Tạo subplot
+fig, axes = plt.subplots(1, 2, figsize=(10,4))
+
+# Random Forest
 sns.heatmap(
     cm1,
-    annot = True,
+    annot=True,
     fmt='d',
     cmap='Blues',
     xticklabels=['Normal','Fraud'],
-    yticklabels=['Normal','Fraud']
+    yticklabels=['Normal','Fraud'],
+    ax=axes[0]
 )
-plt.xlabel('Predicted label')
-plt.ylabel('True label')
-plt.title('Confusion matrix - Random Forest')
-plt.tight_layout()
-plt.show()
+axes[0].set_title('Random Forest')
+axes[0].set_xlabel('Predicted label')
+axes[0].set_ylabel('True label')
 
-#Confusion matrix for XGBoost
-cm2 = confusion_matrix(y_test, xgb_predict)
-plt.figure(figsize=(4,4))
+# XGBoost
 sns.heatmap(
     cm2,
-    annot = True,
+    annot=True,
     fmt='d',
     cmap='Reds',
     xticklabels=['Normal','Fraud'],
-    yticklabels=['Normal','Fraud']
+    yticklabels=['Normal','Fraud'],
+    ax=axes[1]
 )
-plt.xlabel('Predicted label')
-plt.ylabel('True label')
-plt.title('Confusion matrix - XGBoost')
+axes[1].set_title('XGBoost')
+axes[1].set_xlabel('Predicted label')
+axes[1].set_ylabel('True label')
+
 plt.tight_layout()
 plt.show()
+
 
 #Feature importance
 #1. Random Forest
