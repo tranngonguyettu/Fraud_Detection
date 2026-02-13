@@ -17,7 +17,7 @@ Data source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 The real-world bank transactions by European cardholders in 2013 are presented is this data. Out of more than 284K transactions, 492 were recorded as fraud and took place over than 2 days.
 There are 31 columns, including:
  - Time: by seconds, since the very first transaction was occured
- - V1 - V28 (29 feature columns - location, branch, transaction type,...): PCA transformation
+ - V1 - V28: feature columns - results of PCA transformation
  - Amount: the amount that each transaction processes
  - Class: fraud - normal category (0: normal; 1:fraud)
 # Explotary data analysis (EDA)
@@ -33,7 +33,7 @@ Overall, The transaction amount distribution is highly right-skewed, with a smal
 
 <img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/df788bd8-1de5-45cb-b8fd-40cff220f24d" />
 
-The boxplot shows that both normal and fraudulent transactions exhibit a right-skewed distribution of transaction amounts. Normal transactions has higher median and more outliers due to the much large number of normal cases, while lower median and high density of outliers are observed in type fraud because of small number of anonymised records. This huge overlap indicates that the amount feature alone is not a strong predictor for fraud detection and it may lead to missed fraudulent cases if used in isolation as many fraud transactions fall within the typical amount range of normal transactions.
+The boxplot shows that both normal and fraudulent transactions exhibit a right-skewed distribution of transaction amounts. Normal transactions has higher median and more outliers due to the much large number of normal cases, while lower median and high density of outliers are observed in type fraud because of small number of anonymised records. This huge overlap indicates that the amount feature alone is not a strong predictor for fraud detection and it may lead to missed fraudulent cases as many fraud transactions fall within the typical amount range of normal transactions.
 
 ## Time-based analysis
 <img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/23cb0b7f-5306-480e-8f2d-031658ff603c" />
@@ -73,4 +73,18 @@ As expected, accuracy scores are nearly 100 in all models, showing that accuracy
 <img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/66637933-7058-4c82-a156-53f82ed5b9e5" />
 <img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/d6f6cb7a-01ca-4f8b-a6b4-1ecc3f5d9243" />
 
-Although Random Forest detects one more fraudulent transactions compared to XGBoost, it flagged incorrectly more than 10 normal cases as fraud, causing higher costs to investigate. XGBoost Classifier, even missed 1 fraudulent transactions, significantly reduces false positives while maintaining comparable recall. Therefore, XGBoost provides a better overall balance. 
+Although Random Forest detects one more fraudulent transaction compared to XGBoost, it flagged more than 10 normal cases as fraud, causing higher costs to investigate. XGBoost Classifier, even missed 1 fraudulent transaction, significantly reduces false positives while maintaining comparable recall. Therefore, XGBoost provides a better overall balance
+
+# Feature importance
+## Random Forest 
+<img width="800" height="600" alt="Image" src="https://github.com/user-attachments/assets/bbee1ee3-87db-43c0-954e-33551f7fe8a1" />
+
+## XGBoost Classifier
+<img width="800" height="600" alt="Image" src="https://github.com/user-attachments/assets/e545402b-cbe9-40f6-a92d-315bf077205f" />
+
+Both charts of feature importance in Random Forest and XGBoost reveal the significance of feature V14, and certain behavioural features that contribute the most to fraud detection, including V4, V10, V12,... In Random Forest, it depends on multiple characteristics to evaluate and label and the contributions of several features are all considerable. Conversely, V14 is the most dominant feature in XGBoost Classifier, highlighting the reliable and predictive potential of feature V14 and the ability of XGBoost model to optimise information gain
+
+# Feature distribution
+<img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/e4c7abe5-1469-4628-809e-6ba3bb4355e9" />
+
+From feature importance charts, top massive features are selected to analyse their distribution, including 'V14','V10','V4','V12','V11','V9'.
