@@ -6,7 +6,7 @@ By: Jessica Tran - me
 This project focuses on detecting fraudulent transactions using machine learning models. Due to class imbalance in the dataset, traditional evaluation metrics are insufficient. The project emphasises fraud-specific metrics and model interpretability to identify the most effective predictive approach.
 This project aims to:
   1. Analyse patterns in anonymised credit card transaction data and identify characteristics associated with fraudulent behaviour
-  2. To develop and compare models for fraud detection
+  2. To develop and compare ensemble models for fraud detection
   3. To evaluate machine learning models emphasizing recall and F1-score as primary metrics for imbalanced data
   4. To determine the most suitable model for minimising missed fraudulent transactions
 
@@ -82,9 +82,14 @@ Although Random Forest detects one more fraudulent transaction compared to XGBoo
 ## XGBoost Classifier
 <img width="800" height="600" alt="Image" src="https://github.com/user-attachments/assets/e545402b-cbe9-40f6-a92d-315bf077205f" />
 
-Both charts of feature importance in Random Forest and XGBoost reveal the significance of feature V14, and certain behavioural features that contribute the most to fraud detection, including V4, V10, V12,... In Random Forest, it depends on multiple characteristics to evaluate and label and the contributions of several features are all considerable. Conversely, V14 is the most dominant feature in XGBoost Classifier, highlighting the reliable and predictive potential of feature V14 and the ability of XGBoost model to optimise information gain
+Both charts of feature importance in Random Forest and XGBoost reveal the significance of feature V14, and certain behavioural features that contribute the most to fraud detection, including V4, V10, V12,... In Random Forest, it depends on multiple characteristics to evaluate and label and the contributions of several features are all considerable. Conversely, V14 is the most dominant feature in XGBoost Classifier, highlighting the reliable and predictive potential of feature V14 and the ability of XGBoost model to optimise information gain. Especially, transaction time and amount are not in top feature importance, indicating their ambiguous characteristics in fraud detection
 
-# Feature distribution
-<img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/e4c7abe5-1469-4628-809e-6ba3bb4355e9" />
+# Distribution of top predictors
+<img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/0647c76b-a119-454e-89f9-4cc42baf9ccf" />
 
-From feature importance charts, top massive features are selected to analyse their distribution, including 'V14','V10','V4','V12','V11','V9'.
+Based on the feature importance analysis, the most influential features, including 'V14','V10','V4','V12','V11','V9', are selected for further distribution analysis. The Kernel Density Estimation (KDE) plots are used to compare thier significance. The plot show clear distribution shifts between the 2 classes, fraud and normal. Fraudulent cases generally exhibit sharper and more concetrated peaks, whereas normal ones are broader and more disperesed showing that these PCA-transformed predictors offer strong discriminatory power for fraud detection.
+V14 and V10 demonstrate clear separation between fraud and normal cases, with smaller overlap and higher density peaks. Similarly, V4, V12, V11 have larger normal distribution and smaller peaks, highlighting thier predictive relevance. In contrast, V9 shows relatively greater overlap between fraud and normal and closer peak alignment, suggesting its weaker discriminative capability among these selected features.
+Overall, the observed separation patterns confirm that these behavioural features are important to fraud detection, far more than transaction amount and time
+
+# Conclusion
+This project demonstrates an end-to-end fraud detection workflow, from exploratory data analysis to model selection and interpretation. The results highlight the importance of machine learning models and behavioural features in handling highly imbalanced financial datasets
