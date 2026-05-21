@@ -25,7 +25,10 @@ There are 31 columns, including:
 
 1. Data loading and understanding
 2. Data cleaning
+- Conducted data cleaning by removing duplicate transaction records and validating dataset quality
+- Performed preprocessing using feature scaling (StandardScaler) and stratified train-test splitting to preserve fraud distribution.
 3. Exploratory Data Analysis (EDA)
+- Applied exploratory data analysis (EDA) to examine class imbalance, transaction behaviour, amount distribution, time patterns, and feature correlations.
 4. Feature engineering and preprocessing
 5. Train-test splitting
 6. Machine learning model development
@@ -33,9 +36,27 @@ There are 31 columns, including:
   - Decision Tree
   - Random Forests
   - XGBoost Classifier
-7. Model evaluation and comparison (using Recall, Precision, and F1-score)
+7. Model evaluation and comparison
+- Evaluated model performance using fraud-focused metrics including Recall, Precision, F1-score, and Confusion Matrix analysis.
 8. Feature importance interpretation
+- Conducted feature importance and distribution analysis to identify abnormal behavioural predictors associated with fraudulent transactions.
 9. Business insights and recommendations
+- Interpreted model performance from a business perspective by considering the trade-off between false positives and false negatives.
+
+# Key findings 
+- Fraud transactions are extremely rare, creating severe class imbalance.
+- Ensemble learning models outperform simpler baseline methods.
+- XGBoost provides the strongest fraud detection performance.
+- Certain anonymized variables contribute heavily to fraud classification.
+- Evaluation focusing on Recall and Precision is essential for fraud detection systems
+
+# Recommendations
+- Deploy ensemble-based fraud detection models such as XGBoost in production systems
+- Prioritize recall to minimize undetected fraud cases
+- Implement real-time fraud monitoring during high-risk transaction periods
+- Continuously retrain models to adapt to evolving fraud behavior
+- Balance the trade-off between false positives and false negatives to optimize investigation costs and fraud prevention effectiveness.
+- Combine machine learning predictions with rule-based monitoring systems for improved reliability
 
 # 📌 Conclusion
 This project demonstrates an end-to-end fraud detection workflow, from exploratory data analysis to model selection and interpretation. XGBoost Classifier is the best model for fraud detection to detect fraud and optimise the costs of false negatives, evaluated by F1-score and Recall metrics. The results highlight the importance of machine learning models and behavioural features in handling highly imbalanced financial datasets
