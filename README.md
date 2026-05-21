@@ -20,48 +20,22 @@ There are 31 columns, including:
  - V1 - V28: feature columns - results of PCA transformation
  - Amount: the amount that each transaction processes
  - Class: fraud - normal category (0: normal; 1:fraud)
-# 📊 Explotary data analysis (EDA)
-## 📈 Class imbalance
-<img width="1536" height="754" alt="Image" src="https://github.com/user-attachments/assets/ddb8d6d5-3ae1-4bfa-91e6-cc674315d643" />
 
-The dataset is extremely imbalanced, with the number of fraudulent transactions accounting for 0.17% of all transactions. Therefore, accuracy is not recommended in this analysis to evaluate the models. Instead, suitable metrics, such as Recall, Precision, F1-score, AUPRC are highlighted for this imbalance classification
+# Methodologies
 
-## 💳 Transaction amount analysis
-<img width="600" height="400" alt="Image" src="https://github.com/user-attachments/assets/a7e108c1-5465-42cf-bbac-fad7ac080e7b" />
-
-Overall, The transaction amount distribution is highly right-skewed, with a small number of transactions having very large values.
-
-<img width="1200" height="600" alt="Image" src="https://github.com/user-attachments/assets/df788bd8-1de5-45cb-b8fd-40cff220f24d" />
-
-The boxplot shows that both normal and fraudulent transactions exhibit a right-skewed distribution of transaction amounts. Normal transactions has higher median and more outliers due to the much large number of normal cases, while lower median and high density of outliers are observed in type fraud because of small number of anonymised records. This huge overlap indicates that the amount feature alone is not a strong predictor for fraud detection and it may lead to missed fraudulent cases as many fraud transactions fall within the typical amount range of normal transactions.
-
-## ⏳ Time-based analysis
-<img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/23cb0b7f-5306-480e-8f2d-031658ff603c" />
-
-Transaction time was converted into hourly bins to examine temporal patterns. The variations across time hour are observed in the distribution of fraud amount and the density of amount for both transactions are mostly overlapped, showing that time-related features provide limited potential compared to behavioural features.
-
-<img width="1000" height="600" alt="Image" src="https://github.com/user-attachments/assets/e9c820ec-1a44-42a4-959a-98e050464691" />
-
-The fraudulent rate over time is unstable with the number of peaks occuring incoherently. This can be explained by low transaction volumes in these time hours. There is no particular time patterns to predict fraudulent behaviours, meaning that transaction time alone exhibit insufficient potential for fraud detection.
-
-Consequently, compared to transaction amount and time, behavioural PCA features analysis is required to determine clearer separation between fraudulent and legitimate transactions.
-
-## 🔎 Feature correlation
-<img width="1536" height="754" alt="Image" src="https://github.com/user-attachments/assets/9bd79836-616f-45ed-8569-7f2175ae82b8" />
-
-Correlation heat map shows the limited association between most features. This is expected as the majority of predictors are PCA-transformed components.
-
-# 🖥️ Data preprocessing
-- Duplicate records were removed
-- Transaction amount was standardalized using StandardScaler()
-- Stratified train–test splitting was applied to preserve the original class distribution
-
-# 🧠 Model development
-Four supervised learning models were implemented:
-  1. Logistic Regression: baseline model for transaction type classification, used to assess whether linear decision boundaries are sufficient for fraud detection.
-  2. Decision Tree: simple tree-based benchmark to capture non-linear relationships between characteristics
-  3. Random Forest: more complex model to improve robustness through ensemble learning and reduce overfitting
-  4. XGBoost Classifier: the star of this project to handle complex feature interaction in highly imbalanced classification tasks
+1. Data loading and understanding
+2. Data cleaning
+3. Exploratory Data Analysis (EDA)
+4. Feature engineering and preprocessing
+5. Train-test splitting
+6. Machine learning model development
+  - Linear Regression
+  - Decision Tree
+  - Random Forests
+  - XGBoost Classifier
+7. Model evaluation and comparison (using Recall, Precision, and F1-score)
+8. Feature importance interpretation
+9. Business insights and recommendations
 
 # 📌 Conclusion
 This project demonstrates an end-to-end fraud detection workflow, from exploratory data analysis to model selection and interpretation. XGBoost Classifier is the best model for fraud detection to detect fraud and optimise the costs of false negatives, evaluated by F1-score and Recall metrics. The results highlight the importance of machine learning models and behavioural features in handling highly imbalanced financial datasets
